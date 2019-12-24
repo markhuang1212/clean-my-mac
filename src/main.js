@@ -1,10 +1,21 @@
 const fs = require('fs')
-const DirTree = require('./DirTree.js')
+const DirTreeSimple = require('./DirTree.js')
 
 const homedir = require('os').homedir();
 const libDir = homedir + '/Library'
+const argv = process.argv.splice(2)
 
-const userTree = new DirTree(libDir, 'Library', 100)
-const deleteList = userTree.deleteList()
+const userTree = new DirTreeSimple(libDir, 'Library', 100)
+
+if(argv[0]=='list')
+{
+    console.log('Files to be cleared: ' + userTree.deleteSize() + 'Bytes')
+}
+
+if(argv[0]=='clean')
+{
+    console.log('Files to be cleared: ' + userTree.deleteSize() + 'Bytes')
+    userTree.clean()
+}
 
 process.exit(0)
