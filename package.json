@@ -1,11 +1,14 @@
 {
   "name": "clean-my-mac",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "A open source utility to clean mac's file system",
   "main": "src/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "git": "https://github.com/markhuang1212/clean-my-mac.git"
+  },
   "author": "HM",
-  "license": "GLPv3"
+  "license": "GPL-3.0-only"
 }
